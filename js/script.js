@@ -7,37 +7,37 @@
 
 
 
-let userKm = parseInt(prompt("Quanti km devi fare?"));
+const userKm = parseInt(prompt("Quanti km devi fare?"));
 console.log(userKm, typeof(userKm));
-let userAge = parseInt(prompt("Quanti anni hai?"));
+const userAge = parseInt(prompt("Quanti anni hai?"));
 console.log(userAge, typeof(userAge));
 
-let basePrice = 0.21;
-let ticketPrice = userKm * basePrice;
+const basePrice = 0.21;
+const ticketPrice = userKm * basePrice;
 console.log(ticketPrice, typeof(ticketPrice));
 
-let discountTwenty = ticketPrice * 20;
+const discountTwenty = ticketPrice * 20;
 console.log(discountTwenty);
 
-let discountSixtyFive = ticketPrice * 40;
+const discountSixtyFive = ticketPrice * 40;
 console.log(discountSixtyFive);
 
 
-let priceUnder = discountTwenty / 100;
+const priceUnder = discountTwenty / 100;
 console.log(priceUnder);
-let priUnd = priceUnder.toFixed(2);
+const priUnd = priceUnder.toFixed(2);
 console.log(priUnd);
 
-let priceOver = discountSixtyFive / 100;
+const priceOver = discountSixtyFive / 100;
 console.log(priceOver);
-let priOve = priceOver.toFixed(1)
+const priOve = priceOver.toFixed(2)
 console.log(priOve);
 
 
 if (userAge < 18) {
     document.getElementById("result").innerHTML = priUnd;
 } else{
-    document.getElementById("result").innerHTML = ticketPrice
+    document.getElementById("result").innerHTML = ticketPrice.toFixed(2)
 }
 if (userAge > 65) {
     document.getElementById("result").innerHTML = priOve;
